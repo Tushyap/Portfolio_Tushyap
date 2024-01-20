@@ -82,6 +82,7 @@ const ProjectCard = ({
             <a
               href={url}
               target="_blank"
+              rel="noreferrer"
               style={{
                 color: colors.blueAccent[500],
                 textDecoration: "none",
@@ -110,6 +111,7 @@ const ProjectCard = ({
             <a
               href={codeUrl}
               target="_blank"
+              rel="noreferrer"
               style={{
                 color: colors.blueAccent[500],
                 textDecoration: "none",

@@ -15,6 +15,7 @@ export default function PrimarySearchAppBar() {
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
   const { toggled, handleToggle } = useContext(SidebarContext)
+  console.log(toggled)
   return (
 
     <Box sx={{ mt: 2, mb: 1, flexGrow: 1,}} 

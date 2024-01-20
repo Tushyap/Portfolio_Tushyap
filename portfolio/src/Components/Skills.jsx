@@ -1,6 +1,6 @@
 import React from 'react'
 import { tokens } from "../theme";
-import { Box, Typography, useTheme, Grid, LinearProgress, IconButton } from '@mui/material';
+import { Box, Typography, useTheme, Grid,  IconButton } from '@mui/material';
 import { TbBrandHtml5 } from "react-icons/tb";
 import { GrReactjs } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io";

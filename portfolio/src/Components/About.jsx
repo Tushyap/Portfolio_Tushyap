@@ -372,6 +372,7 @@ const About = () => {
                 <a
                   href={gfgUrl}
                   target="_blank"
+                  rel="noreferrer"
                   style={{
                     margin: "10px",
                     color: colors.blueAccent[500],

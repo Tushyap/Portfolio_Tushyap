@@ -135,6 +135,7 @@ const Certificates = () => {
               <a
                 href="http://"
                 target="_blank"
+                rel="noreferrer"
                 style={{ textDecoration: "none" }}
               >
                 <Button

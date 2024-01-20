@@ -1,12 +1,11 @@
 import React from "react";
 import { tokens } from "../theme";
-import { Box, IconButton, Typography, useTheme, Grid } from "@mui/material";
+import { Box, Typography, useTheme, Grid } from "@mui/material";
 import Lottie from "lottie-react";
-import serviceAnimation from "../assets/service-animation.json";
 import webDevAnimation from "../assets/WebDevAnimation.json"
 import webDesignAnimation from "../assets/WebDesignAnimation.json"
 import contentAnimation from "../assets/ContentAnimation.json"
-import robotAnimation from "../assets/RobotAnimation.json";
+
 const Service = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);

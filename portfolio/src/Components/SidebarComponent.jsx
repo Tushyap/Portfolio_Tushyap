@@ -1,73 +1,78 @@
-import { useState, useContext } from 'react'
-import { Sidebar, Menu } from 'react-pro-sidebar';
+import { useState, useContext } from "react";
+import { Sidebar, Menu } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link, Outlet } from "react-router-dom";
 import { tokens } from "../theme";
-import { MenuItem } from 'react-pro-sidebar';
-import image from '../assets/Tushyap.jpeg';
+import { MenuItem } from "react-pro-sidebar";
+import image from "../assets/Tushyap.jpeg";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import ContactPageOutlinedIcon from '@mui/icons-material/ContactPageOutlined';
-import ImportContactsOutlinedIcon from '@mui/icons-material/ImportContactsOutlined';
-import WorkHistoryOutlinedIcon from '@mui/icons-material/WorkHistoryOutlined';
-import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
-import EngineeringOutlinedIcon from '@mui/icons-material/EngineeringOutlined';
-import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
-import { SidebarContext } from '../Context/sidebarContext';
-import KeyboardArrowLeftOutlinedIcon from '@mui/icons-material/KeyboardArrowLeftOutlined';
-import KeyboardArrowRightOutlinedIcon from '@mui/icons-material/KeyboardArrowRightOutlined';
-import FolderSpecialIcon from '@mui/icons-material/FolderSpecial';
-import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import ContactPageOutlinedIcon from "@mui/icons-material/ContactPageOutlined";
+import ImportContactsOutlinedIcon from "@mui/icons-material/ImportContactsOutlined";
+import WorkHistoryOutlinedIcon from "@mui/icons-material/WorkHistoryOutlined";
+import WorkspacePremiumOutlinedIcon from "@mui/icons-material/WorkspacePremiumOutlined";
+import EngineeringOutlinedIcon from "@mui/icons-material/EngineeringOutlined";
+import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
+import { SidebarContext } from "../Context/sidebarContext";
+import KeyboardArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardArrowLeftOutlined";
+import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
+import FolderSpecialIcon from "@mui/icons-material/FolderSpecial";
+import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 
 const SidebarComponent = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const { toggled, handleToggle } = useContext(SidebarContext)
-  const [broken, setBroken] = useState(window.matchMedia('(max-width: 900px)').matches);
+  const { toggled, handleToggle } = useContext(SidebarContext);
+  const [broken, setBroken] = useState(
+    window.matchMedia("(max-width: 900px)").matches
+  );
   const [isCollapsed, setIsCollapsed] = useState(false);
-
+  console.log(broken);
   return (
-    <Box display="flex" sx={{ mt: 2, mb: 1 }} >
-      <Sidebar onBackdropClick={handleToggle}
+    <Box display="flex" sx={{ mt: 2, mb: 1 }}>
+      <Sidebar
+        onBackdropClick={handleToggle}
         toggled={toggled}
         customBreakPoint="900px"
         onBreakPoint={setBroken}
         collapsed={isCollapsed}
         backgroundColor={colors.toggle[200]}
         style={{
-          
           border: `1px solid ${colors.toggle[200]}`,
           backgroundColor: colors.toggle[200],
           boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
         }}
       >
-        <Menu
-          iconShape="square"
-          backgroundColor={colors.toggle[200]}
-        >
+        <Menu iconShape="square" backgroundColor={colors.toggle[200]}>
           {/* LOGO AND MENU ICON */}
           <MenuItem
-            icon={isCollapsed ? <IconButton
-              size="small"
-              edge="end"
-              color={colors.grey[100]}
-              sx={{
-                mt: 1, mb: 1,
-                ":hover": {
-                  color: colors.blueAccent[500]
-                }
-              }}
-              onClick={() => setIsCollapsed(!isCollapsed)}
-              style={{
-                borderRadius: "50%",
-                background: colors.grey[700],
-                boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`
-              }}>
-              <KeyboardArrowRightOutlinedIcon />
-            </IconButton> : undefined}
+            icon={
+              isCollapsed ? (
+                <IconButton
+                  size="small"
+                  edge="end"
+                  color={colors.grey[100]}
+                  sx={{
+                    mt: 1,
+                    mb: 1,
+                    ":hover": {
+                      color: colors.blueAccent[500],
+                    },
+                  }}
+                  onClick={() => setIsCollapsed(!isCollapsed)}
+                  style={{
+                    borderRadius: "50%",
+                    background: colors.grey[700],
+                    boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+                  }}
+                >
+                  <KeyboardArrowRightOutlinedIcon />
+                </IconButton>
+              ) : undefined
+            }
             style={{
               margin: "10px 0 20px 0",
               color: colors.grey[100],
-              backgroundColor: colors.toggle[200]
+              backgroundColor: colors.toggle[200],
             }}
           >
             {!isCollapsed && (
@@ -78,24 +83,26 @@ const SidebarComponent = () => {
                 ml="15px"
                 backgroundColor={colors.toggle[200]}
               >
-                <Typography variant="h3" color={colors.grey[100]}>
-                </Typography>
+                <Typography variant="h3" color={colors.grey[100]}></Typography>
                 <IconButton
                   onClick={() => setIsCollapsed(!isCollapsed)}
                   size="large"
                   edge="end"
                   color={colors.grey[100]}
                   sx={{
-                    mr: 2, mt: 1, mb: 1,
+                    mr: 2,
+                    mt: 1,
+                    mb: 1,
                     ":hover": {
-                      color: colors.blueAccent[500]
-                    }
+                      color: colors.blueAccent[500],
+                    },
                   }}
                   style={{
                     borderRadius: "50%",
                     background: colors.grey[700],
-                    boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`
-                  }}>
+                    boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+                  }}
+                >
                   {isCollapsed ? undefined : <KeyboardArrowLeftOutlinedIcon />}
                 </IconButton>
               </Box>
@@ -103,12 +110,25 @@ const SidebarComponent = () => {
           </MenuItem>
           {!isCollapsed && (
             <Box mb="25px" backgroundColor={colors.toggle[200]}>
-              <Box display="flex" justifyContent="center" alignItems="center" marginTop="20px" height="150px">
-                <Box height="130px" width="130px" display="flex" justifyContent="center" alignItems="center" style={{
-                  borderRadius: "50%",
-                  backgroundColor: colors.toggle[200],
-                  boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
-                }}>
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                marginTop="20px"
+                height="150px"
+              >
+                <Box
+                  height="130px"
+                  width="130px"
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                  style={{
+                    borderRadius: "50%",
+                    backgroundColor: colors.toggle[200],
+                    boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+                  }}
+                >
                   <img
                     alt="profile-user"
                     width="110px"
@@ -127,13 +147,17 @@ const SidebarComponent = () => {
                 >
                   Tushyap
                 </Typography>
-                <Typography marginTop="5px" variant="h5" color={colors.greenAccent[500]}>
+                <Typography
+                  marginTop="5px"
+                  variant="h5"
+                  color={colors.greenAccent[500]}
+                >
                   Software Engineer
                 </Typography>
               </Box>
             </Box>
           )}
-          <Box backgroundColor={colors.toggle[200]} >
+          <Box backgroundColor={colors.toggle[200]}>
             <MenuItem
               icon={<HomeOutlinedIcon />}
               component={<Link to="/" />}
@@ -145,7 +169,7 @@ const SidebarComponent = () => {
                 },
               }}
             >
-              <Typography variant='h4'>Home</Typography>
+              <Typography variant="h4">Home</Typography>
             </MenuItem>
             <MenuItem
               icon={<ImportContactsOutlinedIcon />}
@@ -158,7 +182,7 @@ const SidebarComponent = () => {
                 },
               }}
             >
-              <Typography variant='h4'>About</Typography>
+              <Typography variant="h4">About</Typography>
             </MenuItem>
             <MenuItem
               icon={<WorkHistoryOutlinedIcon />}
@@ -171,7 +195,7 @@ const SidebarComponent = () => {
                 },
               }}
             >
-              <Typography variant='h4'>Experience</Typography>
+              <Typography variant="h4">Experience</Typography>
             </MenuItem>
             <MenuItem
               icon={<EngineeringOutlinedIcon />}
@@ -184,7 +208,7 @@ const SidebarComponent = () => {
                 },
               }}
             >
-              <Typography variant='h4'>Skills</Typography>
+              <Typography variant="h4">Skills</Typography>
             </MenuItem>
             <MenuItem
               icon={<SchoolOutlinedIcon />}
@@ -197,9 +221,9 @@ const SidebarComponent = () => {
                 },
               }}
             >
-              <Typography variant='h4'>Education</Typography>
+              <Typography variant="h4">Education</Typography>
             </MenuItem>
-            
+
             <MenuItem
               icon={<FolderSpecialIcon />}
               component={<Link to="projects" />}
@@ -211,7 +235,7 @@ const SidebarComponent = () => {
                 },
               }}
             >
-              <Typography variant='h4' >Projects</Typography>
+              <Typography variant="h4">Projects</Typography>
             </MenuItem>
             <MenuItem
               icon={<SupportAgentIcon />}
@@ -224,7 +248,7 @@ const SidebarComponent = () => {
                 },
               }}
             >
-              <Typography variant='h4'>Services</Typography>
+              <Typography variant="h4">Services</Typography>
             </MenuItem>
             <MenuItem
               icon={<WorkspacePremiumOutlinedIcon />}
@@ -237,7 +261,7 @@ const SidebarComponent = () => {
                 },
               }}
             >
-              <Typography variant='h4'>Certificates</Typography>
+              <Typography variant="h4">Certificates</Typography>
             </MenuItem>
             <MenuItem
               icon={<ContactPageOutlinedIcon />}
@@ -250,14 +274,14 @@ const SidebarComponent = () => {
                 },
               }}
             >
-              <Typography variant='h4'>Contact</Typography>
+              <Typography variant="h4">Contact</Typography>
             </MenuItem>
           </Box>
         </Menu>
       </Sidebar>
-      <Outlet/>
+      <Outlet />
     </Box>
-  )
-}
+  );
+};
 
-export default SidebarComponent
+export default SidebarComponent;
