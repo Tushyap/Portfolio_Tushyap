@@ -2,7 +2,7 @@ import React from "react";
 import { tokens } from "../theme";
 import { Box, Typography, useTheme } from "@mui/material";
 import Lottie from "lottie-react";
-import robotAnimation from "../assets/RobotAnimation.json";
+import robotAnimation from "../assets/Robot2Animation.json";
 const Footer = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -27,8 +27,8 @@ const Footer = () => {
       <Lottie
         animationData={robotAnimation}
         style={{
-          width: "55px",
-          height: "55px",
+          width: "65px",
+          height: "65px",
           padding: "8px",
           marginLeft:"10px",
         }}

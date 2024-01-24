@@ -31,6 +31,7 @@ const ProjectCard = ({
 }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+
   return (
     <Grid
       container
@@ -208,10 +209,10 @@ const ProjectCard = ({
               </AccordionSummary>
               <AccordionDetails>
                 <List>
-                  {keyPoints.map((keyPoint) => {
+                  {keyPoints.map((keyPoint, index) => {
                     return (
                       <ListItem
-                        key={keyPoints}
+                        key={index}
                         sx={{
                           paddingBottom: "0px",
                           paddingLeft: "0px",

@@ -18,6 +18,7 @@ import Certificates from './Components/Certificates';
 import Service from './Components/Service';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
+import Testimonials from './Components/Testimonials';
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -47,6 +48,7 @@ function App() {
                   <Route path="projects" element={<Projects/>} />
                   <Route path="certificates" element={<Certificates/>} />
                   <Route path="services" element={<Service/>} />
+                  <Route path="testimonials" element={<Testimonials/>} />
                   <Route path="contacts" element={<Contact/>} />
                 </Route>
               </Routes>

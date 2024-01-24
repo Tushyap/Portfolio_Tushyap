@@ -17,6 +17,7 @@ import KeyboardArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardArrowLeft
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
 import FolderSpecialIcon from "@mui/icons-material/FolderSpecial";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
+import RateReviewOutlinedIcon from '@mui/icons-material/RateReviewOutlined';
 
 const SidebarComponent = () => {
   const theme = useTheme();
@@ -262,6 +263,19 @@ const SidebarComponent = () => {
               }}
             >
               <Typography variant="h4">Certificates</Typography>
+            </MenuItem>
+            <MenuItem
+              icon={<RateReviewOutlinedIcon/>}
+              component={<Link to="testimonials" />}
+              rootStyles={{
+                color: colors.grey[100],
+                "& .ps-menu-button:hover": {
+                  color: colors.blueAccent[500],
+                  backgroundColor: `${colors.toggle[200]} !important`,
+                },
+              }}
+            >
+              <Typography variant="h4">Testimonials</Typography>
             </MenuItem>
             <MenuItem
               icon={<ContactPageOutlinedIcon />}
