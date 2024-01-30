@@ -155,7 +155,7 @@ const Contact = () => {
                 </Box>
               </Box>
               <Box
-                padding="16px 8px"
+                padding="12px 6px"
                 width="90%"
                 display="flex"
                 justifyContent="space-evenly"
@@ -169,76 +169,111 @@ const Contact = () => {
                   boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
                 }}
               >
-                <IconButton
-                  size="large"
-                  sx={{
-                    borderRadius: "50%",
-                    background: colors.grey[700],
-                    color: colors.blueAccent[500],
-                    boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
-                    ":hover": {
-                      color: colors.greenAccent[500],
-                    },
-                  }}
+                <a
+                  href="https://github.com/Tushyap"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <PiGithubLogo />
-                </IconButton>
-                <IconButton
-                  size="large"
-                  sx={{
-                    borderRadius: "50%",
-                    background: colors.grey[700],
-                    color: colors.blueAccent[500],
-                    boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
-                    ":hover": {
-                      color: colors.greenAccent[500],
-                    },
-                  }}
+                  <IconButton
+                    size="large"
+                    sx={{
+                      borderRadius: "50%",
+                      margin: "8px",
+                      background: colors.grey[700],
+                      color: colors.blueAccent[500],
+                      boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+                      ":hover": {
+                        color: colors.greenAccent[500],
+                      },
+                    }}
+                  >
+                    <PiGithubLogo />
+                  </IconButton>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/tushyap-bari-1163431b4/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <PiLinkedinLogo />
-                </IconButton>
-                <IconButton
-                  size="large"
-                  sx={{
-                    borderRadius: "50%",
-                    background: colors.grey[700],
-                    color: colors.blueAccent[500],
-                    boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
-                    ":hover": {
-                      color: colors.greenAccent[500],
-                    },
-                  }}
+                  <IconButton
+                    size="large"
+                    sx={{
+                      borderRadius: "50%",
+                      margin: "8px",
+                      background: colors.grey[700],
+                      color: colors.blueAccent[500],
+                      boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+                      ":hover": {
+                        color: colors.greenAccent[500],
+                      },
+                    }}
+                  >
+                    <PiLinkedinLogo />
+                  </IconButton>
+                </a>
+                <a
+                  href="https://www.instagram.com/tushyapbari/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <PiInstagramLogo />
-                </IconButton>
-                <IconButton
-                  size="large"
-                  sx={{
-                    borderRadius: "50%",
-                    color: colors.blueAccent[500],
-                    background: colors.grey[700],
-                    boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
-                    ":hover": {
-                      color: colors.greenAccent[500],
-                    },
-                  }}
+                  <IconButton
+                    size="large"
+                    sx={{
+                      borderRadius: "50%",
+                      margin: "8px",
+                      background: colors.grey[700],
+                      color: colors.blueAccent[500],
+                      boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+                      ":hover": {
+                        color: colors.greenAccent[500],
+                      },
+                    }}
+                  >
+                    <PiInstagramLogo />
+                  </IconButton>
+                </a>
+                <a
+                  href="https://twitter.com/TushyapB"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <PiTwitterLogo />
-                </IconButton>
-                <IconButton
-                  size="large"
-                  sx={{
-                    borderRadius: "50%",
-                    color: colors.blueAccent[500],
-                    background: colors.grey[700],
-                    boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
-                    ":hover": {
-                      color: colors.greenAccent[500],
-                    },
-                  }}
+                  <IconButton
+                    size="large"
+                    sx={{
+                      borderRadius: "50%",
+                      margin: "8px",
+                      color: colors.blueAccent[500],
+                      background: colors.grey[700],
+                      boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+                      ":hover": {
+                        color: colors.greenAccent[500],
+                      },
+                    }}
+                  >
+                    <PiTwitterLogo />
+                  </IconButton>
+                </a>
+                <a
+                  href="https://www.youtube.com/channel/UCrJ__AaDNDh97-KCvK8Oufg"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <PiYoutubeLogoLight />
-                </IconButton>
+                  <IconButton
+                    size="large"
+                    sx={{
+                      borderRadius: "50%",
+                      margin: "8px",
+                      color: colors.blueAccent[500],
+                      background: colors.grey[700],
+                      boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+                      ":hover": {
+                        color: colors.greenAccent[500],
+                      },
+                    }}
+                  >
+                    <PiYoutubeLogoLight />
+                  </IconButton>
+                </a>
               </Box>
             </Grid>
             <Grid item xs={12} md={6} marginTop="10px">
@@ -335,7 +370,7 @@ const Contact = () => {
                           {errors.email?.message}
                         </span>
                       )}
-                      
+
                       <label htmlFor="phone" style={inputLableStyle}>
                         Phone :
                       </label>
@@ -343,9 +378,9 @@ const Contact = () => {
                         type="text"
                         name="phone"
                         {...register("phone", {
-                          required:{
+                          required: {
                             value: true,
-                            message:"Your number is required*"
+                            message: "Your number is required*",
                           },
                           pattern: {
                             value:
@@ -433,7 +468,7 @@ const Contact = () => {
                         onClose={handleClose}
                         severity="success"
                         variant="filled"
-                        sx={{ width: "100%", fontSize:"18px" }}
+                        sx={{ width: "100%", fontSize: "18px" }}
                       >
                         Thank you! Your email recieved...🙂
                       </Alert>

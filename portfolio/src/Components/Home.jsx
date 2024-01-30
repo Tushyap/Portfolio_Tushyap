@@ -9,12 +9,14 @@ import { PiTwitterLogo } from "react-icons/pi";
 import { PiPhoneCall } from "react-icons/pi";
 import { PiYoutubeLogoLight } from "react-icons/pi";
 import { PiLinkedinLogo } from "react-icons/pi";
+import { useNavigate } from "react-router-dom";
 import webAnimation from "../assets/webAnimation.json";
 import Resume from "../assets/Tushyap React Developer.pdf";
 
 const Home = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const navigateTo = useNavigate();
 
   return (
     <Box
@@ -103,7 +105,6 @@ const Home = () => {
               }}
               color={colors.grey[200]}
               padding="20px"
-              
             >
               "An enthusiastic developer with experience in ReactJS, JavaScript,
               Java, Spring Boot, DBMS and AWS. Self-driven innovator with
@@ -179,68 +180,93 @@ const Home = () => {
                 boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
               }}
             >
-              <IconButton
-                size="large"
-                sx={{
-                  borderRadius: "50%",
-                  margin: "8px",
-                  background: colors.grey[700],
-                  color: colors.blueAccent[500],
-                  boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
-                  ":hover": {
-                    color: colors.greenAccent[500],
-                  },
-                }}
+              <a
+                href="https://github.com/Tushyap"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <PiGithubLogo />
-              </IconButton>
-              <IconButton
-                size="large"
-                sx={{
-                  borderRadius: "50%",
-                  margin: "8px",
-                  background: colors.grey[700],
-                  color: colors.blueAccent[500],
-                  boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
-                  ":hover": {
-                    color: colors.greenAccent[500],
-                  },
-                }}
+                <IconButton
+                  size="large"
+                  sx={{
+                    borderRadius: "50%",
+                    margin: "8px",
+                    background: colors.grey[700],
+                    color: colors.blueAccent[500],
+                    boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+                    ":hover": {
+                      color: colors.greenAccent[500],
+                    },
+                  }}
+                >
+                  <PiGithubLogo />
+                </IconButton>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/tushyap-bari-1163431b4/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <PiLinkedinLogo />
-              </IconButton>
-              <IconButton
-                size="large"
-                sx={{
-                  borderRadius: "50%",
-                  margin: "8px",
-                  background: colors.grey[700],
-                  color: colors.blueAccent[500],
-                  boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
-                  ":hover": {
-                    color: colors.greenAccent[500],
-                  },
-                }}
+                <IconButton
+                  size="large"
+                  sx={{
+                    borderRadius: "50%",
+                    margin: "8px",
+                    background: colors.grey[700],
+                    color: colors.blueAccent[500],
+                    boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+                    ":hover": {
+                      color: colors.greenAccent[500],
+                    },
+                  }}
+                >
+                  <PiLinkedinLogo />
+                </IconButton>
+              </a>
+              <a
+                href="https://www.instagram.com/tushyapbari/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <PiInstagramLogo />
-              </IconButton>
-              <IconButton
-                size="large"
-                sx={{
-                  borderRadius: "50%",
-                  margin: "8px",
-                  color: colors.blueAccent[500],
-                  background: colors.grey[700],
-                  boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
-                  ":hover": {
-                    color: colors.greenAccent[500],
-                  },
-                }}
+                <IconButton
+                  size="large"
+                  sx={{
+                    borderRadius: "50%",
+                    margin: "8px",
+                    background: colors.grey[700],
+                    color: colors.blueAccent[500],
+                    boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+                    ":hover": {
+                      color: colors.greenAccent[500],
+                    },
+                  }}
+                >
+                  <PiInstagramLogo />
+                </IconButton>
+              </a>
+              <a
+                href="https://twitter.com/TushyapB"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <PiTwitterLogo />
-              </IconButton>
+                <IconButton
+                  size="large"
+                  sx={{
+                    borderRadius: "50%",
+                    margin: "8px",
+                    color: colors.blueAccent[500],
+                    background: colors.grey[700],
+                    boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+                    ":hover": {
+                      color: colors.greenAccent[500],
+                    },
+                  }}
+                >
+                  <PiTwitterLogo />
+                </IconButton>
+              </a>
               <IconButton
                 size="large"
+                onClick={()=> navigateTo("/contacts")}
                 sx={{
                   borderRadius: "50%",
                   margin: "8px",
@@ -254,21 +280,27 @@ const Home = () => {
               >
                 <PiPhoneCall />
               </IconButton>
-              <IconButton
-                size="large"
-                sx={{
-                  borderRadius: "50%",
-                  margin: "8px",
-                  color: colors.blueAccent[500],
-                  background: colors.grey[700],
-                  boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
-                  ":hover": {
-                    color: colors.greenAccent[500],
-                  },
-                }}
+              <a
+                href="https://www.youtube.com/channel/UCrJ__AaDNDh97-KCvK8Oufg"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <PiYoutubeLogoLight />
-              </IconButton>
+                <IconButton
+                  size="large"
+                  sx={{
+                    borderRadius: "50%",
+                    margin: "8px",
+                    color: colors.blueAccent[500],
+                    background: colors.grey[700],
+                    boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+                    ":hover": {
+                      color: colors.greenAccent[500],
+                    },
+                  }}
+                >
+                  <PiYoutubeLogoLight />
+                </IconButton>
+              </a>
             </Box>
           </Box>
         </Grid>
