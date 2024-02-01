@@ -3,8 +3,10 @@ import { Box, Typography, useTheme, Grid, Tooltip, Button } from '@mui/material'
 import { tokens } from "../theme";
 import { GrSend } from "react-icons/gr";
 import bgImg from '../assets/graduation.png'
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Education = () => {
+  const { loginWithRedirect } = useAuth0();
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const bgStyle = {
@@ -175,6 +177,7 @@ const Education = () => {
             <Tooltip title="Unlocking secrets - Please Login">
               <Button
                 endIcon={<GrSend />}
+                onClick={() => loginWithRedirect()}
                 sx={{
                   paddingTop: "15px",
                   paddingBottom: "15px",

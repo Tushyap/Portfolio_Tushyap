@@ -358,7 +358,7 @@ const Contact = () => {
                         })}
                         id="email"
                         style={inputStyle}
-                        placeholder="Email"
+                        placeholder="baritushyap9120@gmail.com"
                       />
                       {errors.email && (
                         <span
@@ -390,7 +390,7 @@ const Contact = () => {
                         })}
                         id="phone"
                         style={inputStyle}
-                        placeholder="Phone "
+                        placeholder="+91 7905389142"
                       />
                       {errors.phone && (
                         <span
