@@ -133,12 +133,6 @@ const Certificates = () => {
             marginTop="60px"
           >
             <Tooltip title="Unlocking secrets - Please Login">
-              <a
-                href="http://"
-                target="_blank"
-                rel="noreferrer"
-                style={{ textDecoration: "none" }}
-              >
                 <Button
                   endIcon={<GrSend />}
                   onClick={() => loginWithRedirect()}
@@ -170,7 +164,6 @@ const Certificates = () => {
                     View Required Documents
                   </Typography>
                 </Button>
-              </a>
             </Tooltip>
           </Box>
         </Grid>
