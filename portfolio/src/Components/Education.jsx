@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Typography, useTheme, Grid, Tooltip, Button } from '@mui/material';
 import { tokens } from "../theme";
 import { GrSend } from "react-icons/gr";
-import bgImg from '../assets/graduation.png'
+import bgImg from '../assets/graduation.png';
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Education = () => {
