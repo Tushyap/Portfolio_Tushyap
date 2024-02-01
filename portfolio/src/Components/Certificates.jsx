@@ -22,10 +22,11 @@ import SQLBasic from "../assets/certificates/SQLB.jpg";
 import SQLIntermediate from "../assets/certificates/SQLI.jpg";
 import UdemyHtml from "../assets/certificates/udemyHtml.jpg";
 import UdemyJS from "../assets/certificates/jsUdemy.jpg";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Certificates = () => {
   const [index, setIndex] = useState(0);
-
+  const { loginWithRedirect } = useAuth0();
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
@@ -140,6 +141,7 @@ const Certificates = () => {
               >
                 <Button
                   endIcon={<GrSend />}
+                  onClick={() => loginWithRedirect()}
                   sx={{
                     paddingTop: "15px",
                     paddingBottom: "15px",
