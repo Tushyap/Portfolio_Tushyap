@@ -3,14 +3,14 @@ import { tokens } from "../theme";
 import { Box, Typography, useTheme, Grid } from "@mui/material";
 import ProjectCard from "./ProjectCard";
 import adminImg from "../assets/Admin Dashboard.jpg";
-import Project2Img from "../assets/developer.png";
+import Project1Img from "../assets/portfolioPic.png";
 import Lottie from "lottie-react";
 import robotAnimation from "../assets/RobotAnimation.json";
 
 const projectDetails = [
   {
     id: 1,
-    img: Project2Img,
+    img: Project1Img,
     title: "Tushyap - Portfolio",
     url: "https://tushyap-dashboard.netlify.app/",
     codeUrl: "https://github.com/Tushyap/FoodSite",

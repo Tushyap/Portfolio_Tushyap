@@ -97,7 +97,7 @@ export default function PrimarySearchAppBar() {
               variant="h4"
               fontWeight="initial"
             >
-              {user.nickname}
+              {user.name}
             </Typography>
           </Button>
         ) : (
