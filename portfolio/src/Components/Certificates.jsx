@@ -23,6 +23,7 @@ import SQLIntermediate from "../assets/certificates/SQLI.jpg";
 import UdemyHtml from "../assets/certificates/udemyHtml.jpg";
 import UdemyJS from "../assets/certificates/jsUdemy.jpg";
 import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from "react-router-dom";
 
 const Certificates = () => {
   const [index, setIndex] = useState(0);
@@ -133,29 +134,29 @@ const Certificates = () => {
             marginTop="60px"
           >
             <Tooltip title="Unlocking secrets - Please Login">
-              <a
-                href="https://drive.google.com/drive/folders/1s4OBu2vCjnU0Ahn2Hy6lGzb3SdVfKTtx"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  endIcon={<GrSend />}
-                  disabled={!isAuthenticated}
-                  sx={{
-                    paddingTop: "15px",
-                    paddingBottom: "15px",
-                    paddingLeft: "20px",
-                    paddingRight: "18px",
-                    borderRadius: "18px",
-                    fontSize: "18px",
-                    color: colors.blueAccent[500],
+              <Button
+                endIcon={<GrSend />}
+                disabled={!isAuthenticated}
+                sx={{
+                  paddingTop: "15px",
+                  paddingBottom: "15px",
+                  paddingLeft: "20px",
+                  paddingRight: "18px",
+                  borderRadius: "18px",
+                  fontSize: "18px",
+                  color: colors.blueAccent[500],
+                  backgroundColor: colors.toggle[200],
+                  boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+                  ":hover": {
+                    color: colors.greenAccent[500],
                     backgroundColor: colors.toggle[200],
-                    boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
-                    ":hover": {
-                      color: colors.greenAccent[500],
-                      backgroundColor: colors.toggle[200],
-                    },
-                  }}
+                  },
+                }}
+              >
+                <Link
+                  to="https://drive.google.com/drive/folders/1s4OBu2vCjnU0Ahn2Hy6lGzb3SdVfKTtx"
+                  target="_blank"
+                  style={{ textDecoration: "none", color:"inherit" }}
                 >
                   <Typography
                     sx={{
@@ -168,8 +169,8 @@ const Certificates = () => {
                   >
                     View Required Documents
                   </Typography>
-                </Button>
-              </a>
+                </Link>
+              </Button>
             </Tooltip>
           </Box>
         </Grid>

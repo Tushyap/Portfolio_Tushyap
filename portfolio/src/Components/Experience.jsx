@@ -13,6 +13,7 @@ import { TbPoint } from "react-icons/tb";
 import { tokens } from "../theme";
 import { GrSend } from "react-icons/gr";
 import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from "react-router-dom";
 
 const Experience = () => {
   const theme = useTheme();
@@ -262,28 +263,28 @@ const Experience = () => {
               marginTop="20px"
             >
               <Tooltip title="Unlocking secrets - Please Login">
-                <a
-                  href="https://drive.google.com/drive/folders/1s4OBu2vCjnU0Ahn2Hy6lGzb3SdVfKTtx"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Button
+                  endIcon={<GrSend />}
+                  disabled={!isAuthenticated}
+                  sx={{
+                    paddingTop: "15px",
+                    paddingBottom: "15px",
+                    paddingLeft: "25px",
+                    paddingRight: "25px",
+                    borderRadius: "20px",
+                    fontSize: "18px",
+                    color: colors.blueAccent[500],
+                    backgroundColor: colors.toggle[200],
+                    boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+                    ":hover": {
+                      color: colors.greenAccent[500],
+                    },
+                  }}
                 >
-                  <Button
-                    endIcon={<GrSend />}
-                    disabled={!isAuthenticated}
-                    sx={{
-                      paddingTop: "15px",
-                      paddingBottom: "15px",
-                      paddingLeft: "25px",
-                      paddingRight: "25px",
-                      borderRadius: "20px",
-                      fontSize: "18px",
-                      color: colors.blueAccent[500],
-                      backgroundColor: colors.toggle[200],
-                      boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
-                      ":hover": {
-                        color: colors.greenAccent[500],
-                      },
-                    }}
+                  <Link
+                    to="https://drive.google.com/drive/folders/1s4OBu2vCjnU0Ahn2Hy6lGzb3SdVfKTtx"
+                    target="_blank"
+                    style={{ textDecoration: "none", color: "inherit" }}
                   >
                     <Typography
                       sx={{
@@ -296,8 +297,8 @@ const Experience = () => {
                     >
                       View Required Documents
                     </Typography>
-                  </Button>
-                </a>
+                  </Link>
+                </Button>
               </Tooltip>
             </Box>
           </Box>
