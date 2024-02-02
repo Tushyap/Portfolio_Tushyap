@@ -11,11 +11,9 @@ import { tokens } from "../theme";
 import { GrSend } from "react-icons/gr";
 import bgImg from "../assets/graduation.png";
 import { useAuth0 } from "@auth0/auth0-react";
-import { useNavigate } from "react-router-dom";
 
 const Education = () => {
   const { isAuthenticated } = useAuth0();
-  const navigateTo = useNavigate();
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const bgStyle = {
@@ -202,42 +200,43 @@ const Education = () => {
             marginTop="30px"
           >
             <Tooltip title="Unlocking secrets - Please Login">
-              <Button
-                endIcon={<GrSend />}
-                onClick={() =>
-                  navigateTo(
-                    "https://drive.google.com/drive/folders/1s4OBu2vCjnU0Ahn2Hy6lGzb3SdVfKTtx"
-                  )
-                }
-                disabled={!isAuthenticated}
-                sx={{
-                  paddingTop: "15px",
-                  paddingBottom: "15px",
-                  paddingLeft: "20px",
-                  paddingRight: "18px",
-                  borderRadius: "18px",
-                  fontSize: "18px",
-                  color: colors.blueAccent[500],
-                  backgroundColor: colors.toggle[200],
-                  boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
-                  ":hover": {
-                    color: colors.greenAccent[500],
-                    backgroundColor: colors.toggle[200],
-                  },
-                }}
+              <a
+                href="https://drive.google.com/drive/folders/1s4OBu2vCjnU0Ahn2Hy6lGzb3SdVfKTtx"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Typography
+                <Button
+                  endIcon={<GrSend />}
+                  disabled={!isAuthenticated}
                   sx={{
+                    paddingTop: "15px",
+                    paddingBottom: "15px",
+                    paddingLeft: "20px",
+                    paddingRight: "18px",
+                    borderRadius: "18px",
+                    fontSize: "18px",
+                    color: colors.blueAccent[500],
+                    backgroundColor: colors.toggle[200],
+                    boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
                     ":hover": {
                       color: colors.greenAccent[500],
+                      backgroundColor: colors.toggle[200],
                     },
                   }}
-                  variant="h4"
-                  fontWeight="initial"
                 >
-                  View Required Documents
-                </Typography>
-              </Button>
+                  <Typography
+                    sx={{
+                      ":hover": {
+                        color: colors.greenAccent[500],
+                      },
+                    }}
+                    variant="h4"
+                    fontWeight="initial"
+                  >
+                    View Required Documents
+                  </Typography>
+                </Button>
+              </a>
             </Tooltip>
           </Box>
         </Grid>
