@@ -11,7 +11,7 @@ root.render(
       domain="dev-dpz706gflxq23qlx.us.auth0.com"
       clientId="ofCtrE7ypzCsRmZUWvzdyPoEBCQIetqe"
       authorizationParams={{
-        redirect_uri: "https://drive.google.com/drive/folders/1s4OBu2vCjnU0Ahn2Hy6lGzb3SdVfKTtx",
+        redirect_uri: window.location.origin,
       }}
     >
       <BrowserRouter>

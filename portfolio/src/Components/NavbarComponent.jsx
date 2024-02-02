@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Chip, Avatar } from "@mui/material";
+import { Box, Chip, Avatar, Button, Typography } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import { useTheme } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -10,14 +10,15 @@ import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import { SidebarContext } from "../Context/sidebarContext";
 import iconImage from "../assets/Tushyap.jpeg";
 import { RiLogoutCircleRLine } from "react-icons/ri";
-import { useAuth0 } from "@auth0/auth0-react";
+import { User, useAuth0 } from "@auth0/auth0-react";
+import { BiLogIn } from "react-icons/bi";
 
 export default function PrimarySearchAppBar() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
   const { toggled, handleToggle } = useContext(SidebarContext);
-  const { user, isAuthenticated, logout } = useAuth0();
+  const { user, isAuthenticated, logout, loginWithRedirect } = useAuth0();
   console.log(user, "user details");
   console.log(isAuthenticated, "isauthenticated");
   console.log(toggled);
@@ -65,6 +66,73 @@ export default function PrimarySearchAppBar() {
         />
       </Box>
       <Box display="flex" justifyContent="space-around" alignItems="center">
+        {isAuthenticated ? (
+          <Button
+            endIcon={<RiLogoutCircleRLine />}
+            onClick={() =>
+              logout({ logoutParams: { returnTo: window.location.origin } })
+            }
+            sx={{
+              paddingTop: "10px",
+              paddingBottom: "10px",
+              paddingLeft: "8px",
+              paddingRight: "8px",
+              borderRadius: "10px",
+              width: "130px",
+              marginRight: "14px",
+              color: colors.blueAccent[500],
+              backgroundColor: colors.toggle[200],
+              boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+              ":hover": {
+                color: colors.greenAccent[500],
+              },
+            }}
+          >
+            <Typography
+              sx={{
+                ":hover": {
+                  color: colors.greenAccent[500],
+                },
+              }}
+              variant="h4"
+              fontWeight="initial"
+            >
+              {User.name}
+            </Typography>
+          </Button>
+        ) : (
+          <Button
+            endIcon={<BiLogIn />}
+            onClick={() => loginWithRedirect()}
+            sx={{
+              paddingTop: "10px",
+              paddingBottom: "10px",
+              paddingLeft: "8px",
+              paddingRight: "8px",
+              borderRadius: "10px",
+              width: "130px",
+              marginRight: "14px",
+              color: colors.blueAccent[500],
+              backgroundColor: colors.toggle[200],
+              boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+              ":hover": {
+                color: colors.greenAccent[500],
+              },
+            }}
+          >
+            <Typography
+              sx={{
+                ":hover": {
+                  color: colors.greenAccent[500],
+                },
+              }}
+              variant="h4"
+              fontWeight="initial"
+            >
+              Login
+            </Typography>
+          </Button>
+        )}
         <IconButton
           onClick={colorMode.toggleColorMode}
           size="large"
@@ -86,50 +154,6 @@ export default function PrimarySearchAppBar() {
             <LightModeOutlinedIcon />
           )}
         </IconButton>
-        {isAuthenticated && (
-          <IconButton
-            size="large"
-            color={colors.grey[100]}
-            sx={{
-              ":hover": {
-                color: colors.blueAccent[500],
-              },
-            }}
-            style={{
-              margin: "12px",
-              borderRadius: "50%",
-              background: colors.grey[700],
-              boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
-            }}
-          >
-            <Avatar
-              alt={user.name}
-              src={user.picture}
-              sx={{ width: 23, height: 23 }}
-            />
-          </IconButton>
-        )}
-        {isAuthenticated && (
-          <IconButton
-            size="large"
-            color={colors.grey[100]}
-            sx={{
-              ":hover": {
-                color: colors.blueAccent[500],
-              },
-            }}
-            style={{
-              borderRadius: "50%",
-              background: colors.grey[700],
-              boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
-            }}
-            onClick={() =>
-              logout({ logoutParams: { returnTo: window.location.origin } })
-            }
-          >
-            <RiLogoutCircleRLine />
-          </IconButton>
-        )}
       </Box>
     </Box>
   );

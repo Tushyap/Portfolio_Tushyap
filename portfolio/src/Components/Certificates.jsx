@@ -23,10 +23,12 @@ import SQLIntermediate from "../assets/certificates/SQLI.jpg";
 import UdemyHtml from "../assets/certificates/udemyHtml.jpg";
 import UdemyJS from "../assets/certificates/jsUdemy.jpg";
 import { useAuth0 } from "@auth0/auth0-react";
+import { useNavigate } from "react-router-dom";
 
 const Certificates = () => {
   const [index, setIndex] = useState(0);
-  const { loginWithRedirect } = useAuth0();
+  const { isAuthenticated } = useAuth0();
+  const navigateTo = useNavigate();
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
@@ -135,7 +137,12 @@ const Certificates = () => {
             <Tooltip title="Unlocking secrets - Please Login">
                 <Button
                   endIcon={<GrSend />}
-                  onClick={() => loginWithRedirect()}
+                  onClick={() =>
+                    navigateTo(
+                      "https://drive.google.com/drive/folders/1s4OBu2vCjnU0Ahn2Hy6lGzb3SdVfKTtx"
+                    )
+                  }
+                  disabled={!isAuthenticated}
                   sx={{
                     paddingTop: "15px",
                     paddingBottom: "15px",

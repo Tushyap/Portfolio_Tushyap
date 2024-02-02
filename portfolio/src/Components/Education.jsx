@@ -11,9 +11,11 @@ import { tokens } from "../theme";
 import { GrSend } from "react-icons/gr";
 import bgImg from "../assets/graduation.png";
 import { useAuth0 } from "@auth0/auth0-react";
+import { useNavigate } from "react-router-dom";
 
 const Education = () => {
-  const { loginWithRedirect } = useAuth0();
+  const { isAuthenticated } = useAuth0();
+  const navigateTo = useNavigate();
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const bgStyle = {
@@ -25,7 +27,6 @@ const Education = () => {
     <Box
       sx={{
         flexGrow: 1,
-        
       }}
       display="flex"
       justifyContent="center"
@@ -203,7 +204,12 @@ const Education = () => {
             <Tooltip title="Unlocking secrets - Please Login">
               <Button
                 endIcon={<GrSend />}
-                onClick={() => loginWithRedirect()}
+                onClick={() =>
+                  navigateTo(
+                    "https://drive.google.com/drive/folders/1s4OBu2vCjnU0Ahn2Hy6lGzb3SdVfKTtx"
+                  )
+                }
+                disabled={!isAuthenticated}
                 sx={{
                   paddingTop: "15px",
                   paddingBottom: "15px",
