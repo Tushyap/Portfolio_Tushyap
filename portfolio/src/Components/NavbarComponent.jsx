@@ -18,8 +18,7 @@ export default function PrimarySearchAppBar() {
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
   const { toggled, handleToggle } = useContext(SidebarContext);
-  const { user, isAuthenticated, logout, loginWithRedirect } = useAuth0();
-  const loggedUser = user.name.split(" ")
+  const { user, isAuthenticated, logout, loginWithRedirect} = useAuth0();
   console.log(user, "user details");
   console.log(isAuthenticated, "isauthenticated");
   console.log(toggled);
@@ -98,7 +97,7 @@ export default function PrimarySearchAppBar() {
               variant="h4"
               fontWeight="initial"
             >
-              {loggedUser[0]}
+             <Avatar alt={user.name} src={user.picture} />
             </Typography>
           </Button>
         ) : (
