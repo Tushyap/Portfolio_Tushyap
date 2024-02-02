@@ -16,7 +16,6 @@ import CustomTabPanel from "./CustomeTabs";
 import { tokens } from "../theme";
 import { TbPoint } from "react-icons/tb";
 
-
 const About = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -70,11 +69,17 @@ const About = () => {
               color={colors.grey[200]}
               paddingLeft="10px"
             >
-              An enthusiastic developer with experience in ReactJS, JavaScript,
-              Java, Spring Boot, DBMS and AWS. Self-driven innovator with
-              excellent Leadership and Management capabilities. A result driven
-              professional with uncompromising work ethics acquired around 2
-              years of experience in the software development industry.
+              "An enthusiastic web developer with over 2 years of industry
+              experience, I bring a dynamic skill set and a passion for creating
+              innovative digital solutions. Proficient in a range of
+              technologies, I specialize in crafting responsive and user-centric
+              web applications. My expertise extends across front-end
+              development using React, as well as back-end technologies
+              including Java, Node.JS, SpringBoot, and Microservices
+              architecture. With a strong foundation in DBMS & MySQL. I am
+              committed to delivering high-quality, scalable, and efficient web
+              experiences that meet and exceed client expectations. Let's
+              collaborate to turn your digital ideas into reality!"
             </Typography>
           </Box>
           <Box marginTop="30px">
@@ -531,7 +536,6 @@ const About = () => {
             </CustomTabPanel>
           </Box>
         </Grid>
-        
       </Grid>
     </Box>
   );

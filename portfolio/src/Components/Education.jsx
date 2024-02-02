@@ -1,8 +1,15 @@
-import React from 'react'
-import { Box, Typography, useTheme, Grid, Tooltip, Button } from '@mui/material';
+import React from "react";
+import {
+  Box,
+  Typography,
+  useTheme,
+  Grid,
+  Tooltip,
+  Button,
+} from "@mui/material";
 import { tokens } from "../theme";
 import { GrSend } from "react-icons/gr";
-import bgImg from '../assets/graduation.png';
+import bgImg from "../assets/graduation.png";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Education = () => {
@@ -11,67 +18,82 @@ const Education = () => {
   const colors = tokens(theme.palette.mode);
   const bgStyle = {
     backgroundImage: `url(${bgImg})`,
-    backgroundSize: 'cover', // Adjust as needed
-    backgroundPosition: 'center', // Adjust as needed
-
-  }
+    backgroundSize: "cover", // Adjust as needed
+    backgroundPosition: "center",
+  };
   return (
-    <Box sx={{
-      flexGrow: 1,
-    }}
+    <Box
+      sx={{
+        flexGrow: 1,
+        
+      }}
       display="flex"
       justifyContent="center"
       alignItems="center"
       marginLeft="15px"
       marginBottom="15px"
     >
-      <Grid container width="95%" height="100%" marginTop="50px" style={bgStyle}>
-        <Grid item xs={12} md={12} >
-          <Box>
+      <Grid
+        container
+        width="95%"
+        height="100%"
+        marginTop="50px"
+        style={bgStyle}
+      >
+        <Grid item xs={12} md={12}>
+          <Typography
+            variant="h1"
+            sx={{
+              color: colors.blueAccent[400],
+              fontWeight: "500",
+            }}
+          >
+            Education
+          </Typography>
+          <Box marginTop="30px">
             <Typography
-              variant='h3'
+              variant="h2"
               sx={{
                 color: colors.grey[100],
-                fontWeight: "500"
-
+                fontWeight: "500",
               }}
             >
               B.Tech - Rajasthan Technical University Kota
             </Typography>
             <Typography
-              variant='h4'
+              variant="h3"
               sx={{
                 color: colors.grey[100],
                 marginTop: "6px",
                 fontWeight: "400",
-                fontStyle: "italic"
+                fontStyle: "italic",
               }}
             >
               Arya College Of Engineering & Research Center Jaipur Rajasthan
             </Typography>
             <Typography
-              variant='h5'
+              variant="h4"
               sx={{
-                color: colors.greenAccent[400],
-                marginTop: "6px"
+                color: colors.greenAccent[500],
+                marginTop: "6px",
               }}
             >
-              Full-Time |  2018 - 2022
+              Full-Time | 2018 - 2022
             </Typography>
             <Typography
-              variant='h5'
+              variant="h4"
               sx={{
-                color: colors.greenAccent[400],
-                marginTop: "10px"
+                color: colors.greenAccent[500],
+                marginTop: "10px",
               }}
             >
               CGPA : 9.24 / 10
             </Typography>
             <Typography
-              variant='h5'
+              variant="h4"
               sx={{
-                color: colors.greenAccent[400],
-                marginTop: "6px"
+                color: colors.greenAccent[500],
+                marginTop: "6px",
               }}
             >
               GATE 2022 : AIR 11340
@@ -79,90 +101,94 @@ const Education = () => {
           </Box>
           <Box sx={{ marginTop: "20px" }}>
             <Typography
-              variant='h3'
+              variant="h2"
               sx={{
                 color: colors.grey[100],
-                fontWeight: "500"
+                fontWeight: "500",
               }}
             >
               Class XII - CBSE
             </Typography>
             <Typography
-              variant='h4'
+              variant="h3"
               sx={{
                 color: colors.grey[100],
                 marginTop: "6px",
                 fontWeight: "400",
-                fontStyle: "italic"
+                fontStyle: "italic",
               }}
             >
-              Saraswati Vidya Mandir Sr. Sec. School Vivekanand Nagar Sultanpur UP
+              Saraswati Vidya Mandir Sr. Sec. School Vivekanand Nagar Sultanpur
+              UP
             </Typography>
             <Typography
-              variant='h5'
+              variant="h4"
               sx={{
-                color: colors.greenAccent[400],
-                marginTop: "6px"
+                color: colors.greenAccent[500],
+                marginTop: "6px",
               }}
             >
-              Full-Time |  2018
+              Full-Time | 2018
             </Typography>
             <Typography
-              variant='h5'
+              variant="h4"
               sx={{
-                color: colors.greenAccent[400],
-                marginTop: "6px"
+                color: colors.greenAccent[500],
+                marginTop: "6px",
               }}
             >
               Percentage - 79%
             </Typography>
             <Typography
-              variant='h5'
+              variant="h4"
               sx={{
-                color: colors.greenAccent[400],
-                marginTop: "6px"
+                color: colors.greenAccent[500],
+                marginTop: "6px",
               }}
             >
               Core Subjects - Physics, Chemistry, Mathematics
             </Typography>
           </Box>
-          <Box sx={{
-            marginTop: "20px",
-          }}>
+          <Box
+            sx={{
+              marginTop: "20px",
+            }}
+          >
             <Typography
-              variant='h3'
+              variant="h2"
               sx={{
                 color: colors.grey[100],
-                fontWeight: "500"
+                fontWeight: "500",
               }}
             >
               Class X - CBSE
             </Typography>
             <Typography
-              variant='h4'
+              variant="h3"
               sx={{
                 color: colors.grey[100],
                 marginTop: "6px",
                 fontWeight: "400",
-                fontStyle: "italic"
+                fontStyle: "italic",
               }}
             >
-              Saraswati Vidya Mandir Sr. Sec. School Vivekanand Nagar Sultanpur UP
+              Saraswati Vidya Mandir Sr. Sec. School Vivekanand Nagar Sultanpur
+              UP
             </Typography>
             <Typography
-              variant='h5'
+              variant="h4"
               sx={{
-                color: colors.greenAccent[400],
-                marginTop: "6px"
+                color: colors.greenAccent[500],
+                marginTop: "6px",
               }}
             >
-              Full-Time |  2016
+              Full-Time | 2016
             </Typography>
             <Typography
-              variant='h5'
+              variant="h4"
               sx={{
-                color: colors.greenAccent[400],
-                marginTop: "6px"
+                color: colors.greenAccent[500],
+                marginTop: "6px",
               }}
             >
               CGPA : 9.2 / 10
@@ -191,14 +217,18 @@ const Education = () => {
                   ":hover": {
                     color: colors.greenAccent[500],
                     backgroundColor: colors.toggle[200],
-                  }
+                  },
                 }}
               >
-                <Typography sx={{
-                  ":hover": {
-                    color: colors.greenAccent[500],
-                  }
-                }} variant='h4' fontWeight="initial">
+                <Typography
+                  sx={{
+                    ":hover": {
+                      color: colors.greenAccent[500],
+                    },
+                  }}
+                  variant="h4"
+                  fontWeight="initial"
+                >
                   View Required Documents
                 </Typography>
               </Button>
@@ -207,7 +237,7 @@ const Education = () => {
         </Grid>
       </Grid>
     </Box>
-  )
-}
+  );
+};
 
-export default Education
+export default Education;
