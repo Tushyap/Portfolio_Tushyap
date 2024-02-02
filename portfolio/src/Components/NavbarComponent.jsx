@@ -19,6 +19,7 @@ export default function PrimarySearchAppBar() {
   const colorMode = useContext(ColorModeContext);
   const { toggled, handleToggle } = useContext(SidebarContext);
   const { user, isAuthenticated, logout, loginWithRedirect } = useAuth0();
+  const loggedUser = user.name.split(" ")
   console.log(user, "user details");
   console.log(isAuthenticated, "isauthenticated");
   console.log(toggled);
@@ -97,7 +98,7 @@ export default function PrimarySearchAppBar() {
               variant="h4"
               fontWeight="initial"
             >
-              {user.name}
+              {loggedUser[0]}
             </Typography>
           </Button>
         ) : (
