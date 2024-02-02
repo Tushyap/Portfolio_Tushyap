@@ -18,8 +18,10 @@ export default function PrimarySearchAppBar() {
   const colorMode = useContext(ColorModeContext);
   const { toggled, handleToggle } = useContext(SidebarContext);
   const { user, isAuthenticated, logout } = useAuth0();
+  console.log(user, "user details");
+  console.log(isAuthenticated, "isauthenticated");
   console.log(toggled);
-   return (
+  return (
     <Box
       sx={{ mt: 2, mb: 1, flexGrow: 1 }}
       display="flex"
@@ -121,7 +123,9 @@ export default function PrimarySearchAppBar() {
               background: colors.grey[700],
               boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
             }}
-            onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
+            onClick={() =>
+              logout({ logoutParams: { returnTo: window.location.origin } })
+            }
           >
             <RiLogoutCircleRLine />
           </IconButton>
