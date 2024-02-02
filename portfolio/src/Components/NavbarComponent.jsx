@@ -10,7 +10,7 @@ import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import { SidebarContext } from "../Context/sidebarContext";
 import iconImage from "../assets/Tushyap.jpeg";
 import { RiLogoutCircleRLine } from "react-icons/ri";
-import { User, useAuth0 } from "@auth0/auth0-react";
+import { useAuth0 } from "@auth0/auth0-react";
 import { BiLogIn } from "react-icons/bi";
 
 export default function PrimarySearchAppBar() {
@@ -78,8 +78,8 @@ export default function PrimarySearchAppBar() {
               paddingLeft: "8px",
               paddingRight: "8px",
               borderRadius: "10px",
-              width: "130px",
               marginRight: "14px",
+              width: "130px",
               color: colors.blueAccent[500],
               backgroundColor: colors.toggle[200],
               boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
@@ -97,7 +97,7 @@ export default function PrimarySearchAppBar() {
               variant="h4"
               fontWeight="initial"
             >
-              {User.name}
+              {user.given_name}
             </Typography>
           </Button>
         ) : (
