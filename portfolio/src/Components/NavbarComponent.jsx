@@ -19,9 +19,8 @@ export default function PrimarySearchAppBar() {
   const colorMode = useContext(ColorModeContext);
   const { toggled, handleToggle } = useContext(SidebarContext);
   const { user, isAuthenticated, logout, loginWithRedirect} = useAuth0();
-  console.log(user, "user details");
-  console.log(isAuthenticated, "isauthenticated");
   console.log(toggled);
+  
   return (
     <Box
       sx={{ mt: 2, mb: 1, flexGrow: 1 }}
@@ -55,11 +54,12 @@ export default function PrimarySearchAppBar() {
           avatar={<Avatar alt="Tushyap Bari" src={iconImage} />}
           label="Tushyap"
           variant="filled"
-          size="medium"
           sx={{
             mt: 2,
             mr: 2,
             mb: 2,
+            height:"43px",
+            width:"110px",
             background: colors.toggle[200],
             boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
           }}
@@ -73,11 +73,11 @@ export default function PrimarySearchAppBar() {
               logout({ logoutParams: { returnTo: window.location.origin } })
             }
             sx={{
-              paddingTop: "10px",
-              paddingBottom: "10px",
-              paddingLeft: "8px",
-              paddingRight: "8px",
-              borderRadius: "10px",
+              paddingTop: "8px",
+              paddingBottom: "8px",
+              paddingLeft: "6px",
+              paddingRight: "6px",
+              borderRadius: "20px",
               marginRight: "14px",
               width: "130px",
               color: colors.blueAccent[500],
@@ -88,17 +88,7 @@ export default function PrimarySearchAppBar() {
               },
             }}
           >
-            <Typography
-              sx={{
-                ":hover": {
-                  color: colors.greenAccent[500],
-                },
-              }}
-              variant="h4"
-              fontWeight="initial"
-            >
-             <Avatar alt={user.name} src={user.picture} />
-            </Typography>
+           <Avatar alt={user.name} src={user.picture} />
           </Button>
         ) : (
           <Button

@@ -4,6 +4,7 @@ import { Box, Typography, useTheme, Grid } from "@mui/material";
 import ProjectCard from "./ProjectCard";
 import adminImg from "../assets/Admin Dashboard.jpg";
 import Project1Img from "../assets/portfolioPic.png";
+import Edify from "../assets/edify.png"
 import Lottie from "lottie-react";
 import robotAnimation from "../assets/RobotAnimation.json";
 
@@ -12,8 +13,8 @@ const projectDetails = [
     id: 1,
     img: Project1Img,
     title: "Tushyap - Portfolio",
-    url: "https://tushyap-dashboard.netlify.app/",
-    codeUrl: "https://github.com/Tushyap/FoodSite",
+    url: "https://tushyap-bari-portfolio.netlify.app/",
+    codeUrl: "https://github.com/Tushyap/Portfolio_Tushyap",
     description:
       "Explore my world of creativity through this dynamic portfolio project! Crafted with passion and expertise, this website is powered by ReactJS, adorned with Material UI for a sleek aesthetic, and fueled by the seamless email handling of EmailJS. For an extra layer of security and authentication, I've integrated Auth0 to ensure a trustworthy and personalized experience. Let's embark on a journey through the realms of design and technology.",
     keyPoints: [
@@ -45,16 +46,15 @@ const projectDetails = [
   {
     id: 2,
     img: adminImg,
-    title: "Admin Dashboard ... Still Working",
+    title: "Admin Dashboard ... Still WIP",
     url: "https://tushyap-dashboard.netlify.app/",
-    codeUrl: "https://github.com/Tushyap/FoodSite",
+    codeUrl: "https://github.com/Tushyap/admin_dashboard",
     description:
       "Elevate your administrative tasks with our cutting-edge Admin Dashboard built using React, Material-UI, and React Pro Sidebar. This robust and intuitive solution empowers users to manage and monitor various aspects of their application or system effortlessly.",
     keyPoints: [
       "React Framework: Leverage the power of React for a dynamic and responsive user interface.",
       "Material-UI Design: The Admin Dashboard boasts a sleek and modern design language with Material-UI components. This not only enhances the aesthetic appeal but also ensures consistency and usability throughout the application.",
       "React Pro Sidebar Integration: Benefit from the advanced features offered by React Pro Sidebar. Its customizable and feature-rich sidebar enhances navigation and allows users to access crucial information with ease.",
-      "Responsive Layout: The dashboard is designed to be fully responsive, ensuring optimal performance across various devices and screen sizes. Whether accessed on a desktop, tablet, or mobile device, the user experience remains consistent and user-friendly.",
       "Data Visualization: Utilize powerful charts and graphs to transform complex data into actionable insights. Our Admin Dashboard includes interactive visualizations that enable users to analyze trends, make informed decisions, and track performance effortlessly.",
       "User Authentication and Authorization: Implement secure user authentication and authorization mechanisms to control access levels and protect sensitive information. Ensure that only authorized personnel can access specific functionalities within the dashboard.",
       "Cross-Browser Compatibility: Ensure a consistent experience across various web browsers, making the Admin Dashboard accessible to a wider audience.",
@@ -64,10 +64,10 @@ const projectDetails = [
   },
   {
     id: 3,
-    img: adminImg,
+    img: Edify,
     title: "Edify - Training App",
-    url: "https://tushyap-dashboard.netlify.app/",
-    codeUrl: "https://github.com/Tushyap/FoodSite",
+    url: "https://edify-app.netlify.app/",
+    codeUrl: "https://github.com/Tushyap/edify_app",
     description:
       "I have worked on this app with two other teammates from Turkey....Our web application is a cutting-edge platform designed to offer a seamless and enriching learning experience for users seeking a variety of courses. Leveraging the power of ReactJS for the front end, ExpressJS and NodeJS for the backend, and MongoDB for data storage, our platform provides a robust and scalable solution for both course providers and learners.",
     keyPoints: [

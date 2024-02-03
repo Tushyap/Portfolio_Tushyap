@@ -4,7 +4,6 @@ import {
   Typography,
   useTheme,
   Grid,
-  Tooltip,
   Button,
 } from "@mui/material";
 import { tokens } from "../theme";
@@ -200,45 +199,43 @@ const Education = () => {
             alignItems="center"
             marginTop="30px"
           >
-            <Tooltip title="Unlocking secrets - Please Login">
-              <Button
-                endIcon={<GrSend />}
-                disabled={!isAuthenticated}
-                sx={{
-                  paddingTop: "15px",
-                  paddingBottom: "15px",
-                  paddingLeft: "20px",
-                  paddingRight: "18px",
-                  borderRadius: "18px",
-                  fontSize: "18px",
-                  color: colors.blueAccent[500],
+            <Button
+              endIcon={<GrSend />}
+              disabled={!isAuthenticated}
+              sx={{
+                paddingTop: "15px",
+                paddingBottom: "15px",
+                paddingLeft: "20px",
+                paddingRight: "18px",
+                borderRadius: "18px",
+                fontSize: "18px",
+                color: colors.blueAccent[500],
+                backgroundColor: colors.toggle[200],
+                boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+                ":hover": {
+                  color: colors.greenAccent[500],
                   backgroundColor: colors.toggle[200],
-                  boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
-                  ":hover": {
-                    color: colors.greenAccent[500],
-                    backgroundColor: colors.toggle[200],
-                  },
-                }}
+                },
+              }}
+            >
+              <Link
+                to="https://drive.google.com/drive/folders/1s4OBu2vCjnU0Ahn2Hy6lGzb3SdVfKTtx"
+                target="_blank"
+                style={{ textDecoration: "none", color: "inherit" }}
               >
-                <Link
-                  to="https://drive.google.com/drive/folders/1s4OBu2vCjnU0Ahn2Hy6lGzb3SdVfKTtx"
-                  target="_blank"
-                  style={{ textDecoration: "none", color: "inherit" }}
+                <Typography
+                  sx={{
+                    ":hover": {
+                      color: colors.greenAccent[500],
+                    },
+                  }}
+                  variant="h4"
+                  fontWeight="initial"
                 >
-                  <Typography
-                    sx={{
-                      ":hover": {
-                        color: colors.greenAccent[500],
-                      },
-                    }}
-                    variant="h4"
-                    fontWeight="initial"
-                  >
-                    View Required Documents
-                  </Typography>
-                </Link>
-              </Button>
-            </Tooltip>
+                  View Required Documents
+                </Typography>
+              </Link>
+            </Button>
           </Box>
         </Grid>
       </Grid>

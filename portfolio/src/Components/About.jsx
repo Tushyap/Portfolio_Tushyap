@@ -135,7 +135,46 @@ const About = () => {
               </Tabs>
             </Box>
             <CustomTabPanel value={value} index={0}>
-              <Box>
+            <Box sx={{ marginTop: "10px" }}>
+                <Typography
+                  variant="h3"
+                  sx={{
+                    color: colors.blueAccent[400],
+                    fontWeight: "500",
+                  }}
+                >
+                  Project Engineer
+                </Typography>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    color: colors.grey[200],
+                    marginTop: "4px",
+                  }}
+                >
+                  C-DAC - Noida
+                </Typography>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    color: colors.grey[200],
+                    marginTop: "6px",
+                  }}
+                >
+                  Full-Time | Feb 2024 
+                </Typography>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    color: colors.greenAccent[400],
+                    marginTop: "10px",
+                  }}
+                  fontWeight="400"
+                >
+                  Key Skills - Java, SpringBoot, MicroServices, Postman
+                </Typography>
+              </Box>
+              <Box sx={{ marginTop: "30px" }}>
                 <Typography
                   variant="h3"
                   sx={{

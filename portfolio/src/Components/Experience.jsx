@@ -5,7 +5,6 @@ import {
   List,
   ListItem,
   Grid,
-  Tooltip,
   ListItemText,
   Button,
 } from "@mui/material";
@@ -19,6 +18,9 @@ const Experience = () => {
   const theme = useTheme();
   const { isAuthenticated } = useAuth0();
   const colors = tokens(theme.palette.mode);
+
+  const cdac = ["About to Join......"];
+
   const globalLogicAssociate = [
     "Worked with React.js, Redux - Toolkit, Various JS Libraries, JavaScript, Rest APIs, Bootstrap,Tailwind css to develop robust and scalable Frontends.",
     "Develop the new functionality and features as per the requirement also maintain the documentation.",
@@ -50,12 +52,95 @@ const Experience = () => {
       marginLeft="15px"
       marginBottom="15px"
     >
-      <Grid container width="95%" height="100%" marginTop="50px">
+      <Grid container width="95%" height="100%" marginTop="40px">
         <Grid item xs={12} md={12}>
           <Box
             display="flex"
             justifyContent="space-between"
             alignItems="center"
+            marginTop="10px"
+            sx={{
+              flexGrow: 1,
+              display: { sm: "block", lg: "flex" },
+            }}
+          >
+            <Typography
+              variant="h3"
+              sx={{
+                color: colors.blueAccent[400],
+                fontWeight: "500",
+              }}
+            >
+              Project Engineer
+            </Typography>
+            <Typography
+              variant="h5"
+              sx={{
+                color: colors.grey[200],
+                marginTop: "4px",
+              }}
+            >
+              C-DAC Noida
+            </Typography>
+          </Box>
+          <Box>
+            <Typography
+              variant="h5"
+              sx={{
+                color: colors.grey[200],
+                marginTop: "6px",
+              }}
+            >
+              Full Time | Feb 2024
+            </Typography>
+            <Typography
+              variant="h4"
+              sx={{
+                color: colors.greenAccent[400],
+                marginTop: "10px",
+                fontWeight: "500",
+              }}
+            >
+              Key Responsibilities
+            </Typography>
+            <List>
+              {cdac.map((responsibility) => {
+                return (
+                  <ListItem
+                    key={responsibility}
+                    sx={{
+                      paddingBottom: "0px",
+                      paddingLeft: "0px",
+                      paddingRight: "0px",
+                      paddingTop: "5px",
+                    }}
+                  >
+                    <TbPoint
+                      style={{
+                        minWidth: "20px",
+                        color: colors.greenAccent[300],
+                      }}
+                    />
+                    <ListItemText
+                      sx={{ color: colors.grey[200] }}
+                      primaryTypographyProps={{
+                        fontSize: 16,
+                        fontWeight: "initial",
+                        letterSpacing: 0,
+                      }}
+                    >
+                      {responsibility}
+                    </ListItemText>
+                  </ListItem>
+                );
+              })}
+            </List>
+          </Box>
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            marginTop="20px"
             sx={{
               flexGrow: 1,
               display: { sm: "block", lg: "flex" },
@@ -178,7 +263,7 @@ const Experience = () => {
               display="flex"
               justifyContent="space-between"
               alignItems="center"
-              marginTop="10px"
+              marginTop="20px"
               sx={{
                 flexGrow: 1,
                 display: { sm: "block", lg: "flex" },
@@ -262,44 +347,42 @@ const Experience = () => {
               alignItems="center"
               marginTop="20px"
             >
-              <Tooltip title="Unlocking secrets - Please Login">
-                <Button
-                  endIcon={<GrSend />}
-                  disabled={!isAuthenticated}
-                  sx={{
-                    paddingTop: "15px",
-                    paddingBottom: "15px",
-                    paddingLeft: "25px",
-                    paddingRight: "25px",
-                    borderRadius: "20px",
-                    fontSize: "18px",
-                    color: colors.blueAccent[500],
-                    backgroundColor: colors.toggle[200],
-                    boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
-                    ":hover": {
-                      color: colors.greenAccent[500],
-                    },
-                  }}
+              <Button
+                endIcon={<GrSend />}
+                disabled={!isAuthenticated}
+                sx={{
+                  paddingTop: "15px",
+                  paddingBottom: "15px",
+                  paddingLeft: "25px",
+                  paddingRight: "25px",
+                  borderRadius: "20px",
+                  fontSize: "18px",
+                  color: colors.blueAccent[500],
+                  backgroundColor: colors.toggle[200],
+                  boxShadow: `4px 5px 6px ${colors.toggle[100]} , -4px -5px 6px ${colors.toggle[300]}`,
+                  ":hover": {
+                    color: colors.greenAccent[500],
+                  },
+                }}
+              >
+                <Link
+                  to="https://drive.google.com/drive/folders/1s4OBu2vCjnU0Ahn2Hy6lGzb3SdVfKTtx"
+                  target="_blank"
+                  style={{ textDecoration: "none", color: "inherit" }}
                 >
-                  <Link
-                    to="https://drive.google.com/drive/folders/1s4OBu2vCjnU0Ahn2Hy6lGzb3SdVfKTtx"
-                    target="_blank"
-                    style={{ textDecoration: "none", color: "inherit" }}
+                  <Typography
+                    sx={{
+                      ":hover": {
+                        color: colors.greenAccent[500],
+                      },
+                    }}
+                    variant="h4"
+                    fontWeight="initial"
                   >
-                    <Typography
-                      sx={{
-                        ":hover": {
-                          color: colors.greenAccent[500],
-                        },
-                      }}
-                      variant="h4"
-                      fontWeight="initial"
-                    >
-                      View Required Documents
-                    </Typography>
-                  </Link>
-                </Button>
-              </Tooltip>
+                    View Required Documents
+                  </Typography>
+                </Link>
+              </Button>
             </Box>
           </Box>
         </Grid>

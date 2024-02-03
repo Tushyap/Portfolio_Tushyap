@@ -220,13 +220,24 @@ const Service = () => {
                       marginTop: "20px",
                     }}
                   >
-                    Dive into the world of web development with Your Placement
-                    Buddies on YouTube! As your dedicated content creator, I
-                    bring you engaging videos covering the latest in web
-                    development trends, tutorials, and industry insights. Join
-                    the community for a learning experience that fuels your
-                    passion for creating impactful and innovative web solutions.
-                    Subscribe now!
+                    Dive into the world of web development with{" "}
+                    <a
+                      href="https://www.youtube.com/channel/UCrJ__AaDNDh97-KCvK8Oufg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        textDecoration: "none",
+                        color: colors.blueAccent[500],
+                      }}
+                    >
+                      Your Placement Buddies
+                    </a>{" "}
+                    on YouTube! As your dedicated content creator, I bring you
+                    engaging videos covering the latest in web development
+                    trends, tutorials, and industry insights. Join the community
+                    for a learning experience that fuels your passion for
+                    creating impactful and innovative web solutions. Subscribe
+                    now!
                   </Typography>
                 </Box>
               </Box>
