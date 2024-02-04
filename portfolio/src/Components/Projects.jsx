@@ -4,7 +4,8 @@ import { Box, Typography, useTheme, Grid } from "@mui/material";
 import ProjectCard from "./ProjectCard";
 import adminImg from "../assets/Admin Dashboard.jpg";
 import Project1Img from "../assets/portfolioPic.png";
-import Edify from "../assets/edify.png"
+import Edify from "../assets/edify.png";
+import iChanakya from "../assets/iChanakya.png";
 import Lottie from "lottie-react";
 import robotAnimation from "../assets/RobotAnimation.json";
 
@@ -60,7 +61,15 @@ const projectDetails = [
       "Cross-Browser Compatibility: Ensure a consistent experience across various web browsers, making the Admin Dashboard accessible to a wider audience.",
       "API Integration: Seamlessly integrate with external APIs to fetch and display real-time data. This enables users to have a comprehensive view of their application or system directly within the dashboard.",
     ],
-    skills: ["React.JS", "JavaScript","React-Router-Dom", "React Pro Sidebar", "MUI","Git","Github"],
+    skills: [
+      "React.JS",
+      "JavaScript",
+      "React-Router-Dom",
+      "React Pro Sidebar",
+      "MUI",
+      "Git",
+      "Github",
+    ],
   },
   {
     id: 3,
@@ -71,6 +80,7 @@ const projectDetails = [
     description:
       "I have worked on this app with two other teammates from Turkey....Our web application is a cutting-edge platform designed to offer a seamless and enriching learning experience for users seeking a variety of courses. Leveraging the power of ReactJS for the front end, ExpressJS and NodeJS for the backend, and MongoDB for data storage, our platform provides a robust and scalable solution for both course providers and learners.",
     keyPoints: [
+      "Backend is not hosted yet...",
       "ReactJS for Dynamic User Interfaces: Utilize the power of ReactJS to create dynamic and interactive user interfaces.",
       "ExpressJS and NodeJS Backend: Leverage the ExpressJS framework on top of NodeJS for building a scalable and efficient backend.Handle server-side logic, routing, and API integrations to ensure seamless communication between the frontend and backend.",
       "MongoDB for Data Storage: Implement MongoDB as the database solution for storing and managing course content, user profiles, and other relevant data.",
@@ -90,6 +100,27 @@ const projectDetails = [
       "Restfyl APIs",
       "API Integration",
     ],
+  },
+  {
+    id: 4,
+    img: iChanakya,
+    title: "iChanakya",
+    url: "https://ichanakya.netlify.app/",
+    codeUrl: "https://github.com/Tushyap/iChanakya",
+    description:
+      "iChanakya, a static website I designed and developed using HTML and CSS. iChanakya is dedicated to offering expertise in strategic Political Communication, Constituency Profiling and Management, Campaign Management, Digital Media Management, and Content Placement Strategy. The website serves as a hub for individuals and organizations seeking professional services in the realm of political strategy and communication. Through clean and intuitive design, I ensured that visitors can easily navigate and access information about iChanakya's diverse offerings.",
+    keyPoints: [
+      "This project allowed me to not only demonstrate my proficiency in front-end development but also to apply my understanding of strategic communication principles to the digital landscape.",
+      "Strategic Political Communication: Expertise in developing and implementing effective political communication strategies.",
+      "Constituency Profiling and Management: Offering services for comprehensive analysis and management of political constituencies.",
+      "Campaign Management: Providing solutions for planning and executing successful political campaigns.",
+      "Polling & Political Data Analysis: Utilizing data analysis techniques for informed decision-making in the political arena.",
+    ],
+    skills: [
+      "Html5",
+      "CSS3",
+      "Bootstrap",
+      ],
   },
 ];
 

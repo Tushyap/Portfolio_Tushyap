@@ -171,7 +171,7 @@ const About = () => {
                   }}
                   fontWeight="400"
                 >
-                  Key Skills - Java, SpringBoot, MicroServices, Postman
+                  Key Skills - Java, SpringBoot, MicroServices, Postman ...
                 </Typography>
               </Box>
               <Box sx={{ marginTop: "30px" }}>
@@ -211,7 +211,7 @@ const About = () => {
                   fontWeight="400"
                 >
                   Key Skills - React.JS, JavaScript, Java, SpringBoot,
-                  MicroServices, Postman
+                  MicroServices, Postman ...
                 </Typography>
               </Box>
               <Box sx={{ marginTop: "30px" }}>
@@ -250,7 +250,7 @@ const About = () => {
                   }}
                   fontWeight="400"
                 >
-                  Key Skills - MERN Stack - React.JS, JavaScript
+                  Key Skills - MERN Stack - React.JS, JavaScript ...
                 </Typography>
               </Box>
             </CustomTabPanel>
