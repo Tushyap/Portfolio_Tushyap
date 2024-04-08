@@ -19,7 +19,11 @@ const Experience = () => {
   const { isAuthenticated } = useAuth0();
   const colors = tokens(theme.palette.mode);
 
-  const cdac = ["About to Join......"];
+  const cdac = [
+  "Working with Spring Framework - Spring MVC, Spring Security, Hibernate,Spring Boot, Microservices, MySQL, PostgreSQL to develop scalable backends.",
+  "Develop the new functionality and features as per the requirement.",
+  "Troubleshoot and fixed bugs and issues to ensure smooth operation of the applications.",
+  "Coordinate with team and discuss technical problems, bugs and report the daily status to Reporting Manager.",];
 
   const globalLogicAssociate = [
     "Worked with React.js, Redux - Toolkit, Various JS Libraries, JavaScript, Rest APIs, Bootstrap,Tailwind css to develop robust and scalable Frontends.",
