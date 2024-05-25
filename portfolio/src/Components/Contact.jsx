@@ -134,7 +134,7 @@ const Contact = () => {
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
-                width="90%"
+                width="95%"
                 marginTop="40px"
               >
                 <Box
@@ -155,10 +155,10 @@ const Contact = () => {
                 </Box>
               </Box>
               <Box
-                padding="12px 6px"
-                width="90%"
+                padding="8px 4px"
+                width="95%"
                 display="flex"
-                justifyContent="space-evenly"
+                justifyContent="space-around"
                 alignItems="center"
                 marginTop="50px"
                 style={{
@@ -175,7 +175,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                 >
                   <IconButton
-                    size="large"
+                    size="medium"
                     sx={{
                       borderRadius: "50%",
                       margin: "8px",
@@ -196,7 +196,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                 >
                   <IconButton
-                    size="large"
+                    size="medium"
                     sx={{
                       borderRadius: "50%",
                       margin: "8px",
@@ -217,7 +217,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                 >
                   <IconButton
-                    size="large"
+                    size="medium"
                     sx={{
                       borderRadius: "50%",
                       margin: "8px",
@@ -238,7 +238,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                 >
                   <IconButton
-                    size="large"
+                    size="medium"
                     sx={{
                       borderRadius: "50%",
                       margin: "8px",
@@ -259,7 +259,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                 >
                   <IconButton
-                    size="large"
+                    size="medium"
                     sx={{
                       borderRadius: "50%",
                       margin: "8px",
@@ -307,7 +307,7 @@ const Contact = () => {
                   >
                     <form
                       onSubmit={handleSubmit(onSubmit, onError)}
-                      style={{ width: "100%" }}
+                      style={{ width: "95%" }}
                       ref={formData}
                       noValidate
                     >
