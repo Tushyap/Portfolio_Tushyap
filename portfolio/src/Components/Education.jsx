@@ -97,6 +97,15 @@ const Education = () => {
             >
               GATE 2022 : AIR 11340
             </Typography>
+            <Typography
+              variant="h4"
+              sx={{
+                color: colors.greenAccent[500],
+                marginTop: "6px",
+              }}
+            >
+              University Rank: 5th
+            </Typography>
           </Box>
           <Box sx={{ marginTop: "20px" }}>
             <Typography
